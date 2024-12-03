@@ -1,49 +1,136 @@
-*{
-    padding: 0;
+/* Página general */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f9f9f9;
 }
 
-.navbar{
+/* Navegación */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: bisque;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.nav-links{
+.logo h1 {
+    font-size: 1.8em;
+    color: #6b4226;
+}
+
+.nav-links {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    gap: 15px;
 }
 
-.nav-links li{
-    margin-left: 20px;
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-.hero{
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPL1wU6oDvzG2FaLM9X9x_mTG-hyzYwIwqmQ&s);
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: azure;
-    padding: 100px 0;
+.nav-links li a:hover {
+    color: #6b4226;
 }
 
-.hero-content{
+/* Hero Section */
+.hero {
+    background: url('https://static.vecteezy.com/system/resources/previews/009/276/855/non_2x/coffee-beans-background-free-vector.jpg');
+    color: white;
+    height: 80vh;
     display: flex;
-    flex-direction: column;
     align-items: center;
-
+    justify-content: center;
+    text-align: center;
 }
 
-.hero h2{
-    font-size: 3rem;
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2em;
     margin-bottom: 20px;
 }
 
+.hero-content button {
+    background-color: #6b4226;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content button:hover {
+    background-color: #8b5e3c;
+}
+
+/* Productos destacados */
+.featured-products {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.featured-products h2 {
+    font-size: 2em;
+    color: #6b4226;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.5em;
+    color: #6b4226;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #6b4226;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 0.9em;
+}
