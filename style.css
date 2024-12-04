@@ -100,6 +100,7 @@ body {
     flex-wrap: wrap;
 }
 
+
 .product {
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -109,10 +110,16 @@ body {
     max-width: 300px;
 }
 
+
 .product img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 15px;
+    transition: all .3s ease-in-out;
+}
+
+.product img:hover{
+    transform: scale(1.05);
 }
 
 .product h3 {
