@@ -249,3 +249,36 @@ footer {
     padding: 10px 20px;
     font-size: 0.9em;
 }
+
+
+.emparedados{
+    padding: 50px;
+    text-align: center;
+}
+
+.grid-emparedados{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 260px);
+    gap: 20px;
+    grid-template-areas: 
+    "emparedado1 emparedado1 emparedado2 emparedado3"
+    "emparedado1 emparedado1 emparedado2 emparedado4";
+}
+
+.emparedado{
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.emparedado img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.emparedado:nth-child(1) {grid-area: emparedado1;}
+.emparedado:nth-child(2) {grid-area: emparedado2;}
+.emparedado:nth-child(3) {grid-area: emparedado3;}
+.emparedado:nth-child(4) {grid-area: emparedado4;}
