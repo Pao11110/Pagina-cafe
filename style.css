@@ -356,64 +356,192 @@ footer {
 }
 
 
-.emparedados{
+.emparedados {
     padding: 50px;
     text-align: center;
+    background: #f8f8f8; 
 }
 
-.grid-emparedados{
+.emparedados h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.grid-emparedados {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 260px);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    grid-template-areas: 
-    "emparedado1 emparedado1 emparedado2 emparedado3"
-    "emparedado1 emparedado1 emparedado2 emparedado4";
+    justify-items: center;
 }
 
-.emparedado{
-    border: 1px solid gray;
+.emparedado {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.emparedado img{
+.emparedado:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.emparedado img {
     width: 100%;
     height: 150px;
     object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.emparedado h3 {
+    font-size: 1.5rem;
+    color: #444;
     margin-bottom: 10px;
 }
 
-.emparedado:nth-child(1) {grid-area: emparedado1;}
-.emparedado:nth-child(2) {grid-area: emparedado2;}
-.emparedado:nth-child(3) {grid-area: emparedado3;}
-.emparedado:nth-child(4) {grid-area: emparedado4;}
+.emparedado p {
+    font-size: 1rem;
+    color: #666;
+}
 
-/* Media query */
+/* Media Query */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+    .emparedados {
+        padding: 30px;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px; 
-        width: 100%; 
+    .grid-emparedados {
+        grid-template-columns: 1fr;
     }
 
-    .nav-links li {
-        width: 100%;
-        text-align: left;
+    .emparedado {
+        padding: 15px;
     }
 
-    .nav-links li a {
-        padding: 10px 20px;
-        display: block; 
-        border-bottom: 1px solid #eee; 
+    .emparedado img {
+        height: 120px;
+    }
+}
+.bebidas, .postres-menu {
+    padding: 50px;
+    text-align: center;
+    background: #f8f8f8; 
+}
+
+.bebidas h2, .postres-menu h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.grid-bebidas, .grid-postres {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.bebida, .postre-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.bebida:hover, .postre-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.bebida img, .postre-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.bebida h3, .postre-item h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.bebida p, .postre-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+    .bebidas, .postres-menu {
+        padding: 30px;
     }
 
-    .logo h1 {
-        font-size: 1.5em;
-        margin-bottom: 15px;
+    .grid-bebidas, .grid-postres {
+        grid-template-columns: 1fr;
+    }
+
+    .bebida, .postre-item {
+        padding: 15px;
+    }
+
+    .bebida img, .postre-item img {
+        height: 120px;
+    }
+}
+
+.christmas-decoration {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 2rem; 
+    cursor: pointer;
+    z-index: 1000; 
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    animation: bounce 2s infinite; /* Animación festiva */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
+}
+
+/* Efecto de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Efecto hover */
+.christmas-decoration:hover {
+    transform: scale(1.2); 
+    text-shadow: 3px 3px 8px rgba(255, 0, 0, 0.7); 
+}
+
+.holiday-message {
+    font-size: 1.2rem; 
+    font-weight: bold;
+    color: #ff4d4d; 
+    animation: pulse 2s infinite;
+}
+
+/* Animación de pulso para el mensaje */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
     }
 }
